@@ -1,0 +1,23 @@
+version: '3.3'
+services:
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: 'karty_db'
+      MYSQL_USER: 'karty_user'
+      MYSQL_PASSWORD: 'karty_pass'
+      MYSQL_ROOT_PASSWORD: 'root_pass'
+    ports:
+      - 3306:3306
+    networks:
+      - karty
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - karty
+networks:
+  karty:
+    driver: bridge
