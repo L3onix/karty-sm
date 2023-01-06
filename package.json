@@ -1,0 +1,15 @@
+{
+  "name": "karty-sm",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:L3onix/karty-sm.git",
+  "author": "Leonardo Facundes <L3onix> <leonardo.fm00@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
