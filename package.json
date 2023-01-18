@@ -6,6 +6,7 @@
   "author": "Leonardo Facundes <L3onix> <leonardo.fm00@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bullmq": "^3.5.8",
     "dotenv": "^16.0.3",
     "express": "^4.18.2"
   },
