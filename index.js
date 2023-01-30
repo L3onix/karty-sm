@@ -1,20 +1,18 @@
-// import { Redis } from './src/services/Redis';
 const Redis = require('./src/services/Redis');
-
-/*
-require('dotenv').config()
-const express = require('express')
-const app = express()
-const port = process.env.APP_PORT
-
-app.get('/', (req, res) => {
-    res.send('hello world')
-})
-
-app.listen(port, () => {
-    console.log('Running application!')
-})
-*/
-
 const redis = new Redis();
 const queue = redis.getQueue('teste');
+
+addInQueue(queue);
+
+async function addInQueue(queue) {
+    await queue.add(
+        'karty',
+        {
+            user: 123,
+            product: 'code1234'
+        },
+        {
+            delay: 5000 // 5 segundos
+        }
+    );
+}

@@ -5,6 +5,12 @@
   "repository": "git@github.com:L3onix/karty-sm.git",
   "author": "Leonardo Facundes <L3onix> <leonardo.fm00@gmail.com>",
   "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "worker": "node ./worker.js",
+    "queue": "node ./queue.js",
+    "start": "node ./index.js"
+  },
   "dependencies": {
     "bullmq": "^3.5.8",
     "dotenv": "^16.0.3",
